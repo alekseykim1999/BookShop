@@ -7,7 +7,11 @@ namespace Library.Data.Models
 {
     public class Author
     {
-        public int AuthorId { get; set; }
         public string AuthorName { get; set; }
+
+        public Author(string _name)
+        {
+            this.AuthorName = _name;
+        }
     }
 }

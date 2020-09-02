@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="HibernateMapping\" />
     <Folder Include="ViewModel\" />
   </ItemGroup>
 
