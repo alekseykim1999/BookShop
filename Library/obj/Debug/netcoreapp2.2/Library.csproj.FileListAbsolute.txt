@@ -12,3 +12,14 @@ D:\TestExercise\Library\obj\Debug\netcoreapp2.2\Library.AssemblyInfo.cs
 D:\TestExercise\Library\obj\Debug\netcoreapp2.2\Library.RazorTargetAssemblyInfo.cache
 D:\TestExercise\Library\obj\Debug\netcoreapp2.2\Library.dll
 D:\TestExercise\Library\obj\Debug\netcoreapp2.2\Library.pdb
+D:\TestExercise\Library\bin\Debug\netcoreapp2.2\Library.Views.dll
+D:\TestExercise\Library\bin\Debug\netcoreapp2.2\Library.Views.pdb
+D:\TestExercise\Library\obj\Debug\netcoreapp2.2\Library.TagHelpers.input.cache
+D:\TestExercise\Library\obj\Debug\netcoreapp2.2\Library.TagHelpers.output.cache
+D:\TestExercise\Library\obj\Debug\netcoreapp2.2\Library.RazorCoreGenerate.cache
+D:\TestExercise\Library\obj\Debug\netcoreapp2.2\Razor\Views\Info\AddAuthor.g.cshtml.cs
+D:\TestExercise\Library\obj\Debug\netcoreapp2.2\Library.RazorTargetAssemblyInfo.cs
+D:\TestExercise\Library\obj\Debug\netcoreapp2.2\Library.Views.pdb
+D:\TestExercise\Library\obj\Debug\netcoreapp2.2\Library.csproj.CopyComplete
+D:\TestExercise\Library\obj\Debug\netcoreapp2.2\Razor\Views\Info\AddPublisher.g.cshtml.cs
+D:\TestExercise\Library\obj\Debug\netcoreapp2.2\Razor\Views\Info\AddBook.g.cshtml.cs
