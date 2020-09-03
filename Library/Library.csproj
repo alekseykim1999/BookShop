@@ -10,22 +10,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="hibernate.cfg.xml" />
-    <None Remove="HibernateMapping\Author.hbm.xml" />
+    <None Remove="NHibernate_1\Author.hbm.xml" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="hibernate.cfg.xml" />
-    <EmbeddedResource Include="HibernateMapping\Author.hbm.xml" />
+    <EmbeddedResource Include="NHibernate_1\Author.hbm.xml" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="KendoUIWeb" Version="2014.1.318" />
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
     <PackageReference Include="Nhibernate" Version="4.0.4.4000" />
+    <PackageReference Include="NHibernate.JetDriver" Version="2.0.0.1002" />
     <PackageReference Include="System.Data.OleDb" Version="4.7.1" />
   </ItemGroup>
 

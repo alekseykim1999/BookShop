@@ -14,26 +14,19 @@ namespace Library.Controllers
         public ViewResult AddAuthor() 
         {
 
-            BookRepository library = new BookRepository();
-            List<Book> hh = library.GetBooks();
             return View(); 
-
-
         }
 
         public ViewResult AddPublisher() 
         {
             
             return View();
-
-
         }
 
         public ViewResult AddBook()
         {
             
             return View();
-
         }
 
     }

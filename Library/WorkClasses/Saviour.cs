@@ -17,38 +17,33 @@ namespace Library.WorkClasses
 
    
     public class Saviour : Connection
-    {
-
-        
-
-
+    {   
         public Saviour()
         {
-            
+            myConnection.Open();
         }
         public void SaveAuthorToAccess(Author _author)
         {
-            
-            myConnection.Open();
 
 
-            OleDbCommand worker = new OleDbCommand();
-            worker.Connection = myConnection;
-            worker.CommandType = CommandType.Text;
-            worker.CommandText = ("INSERT INTO [Authors]([AuthorName]) VALUES (@name)");
-            worker.Parameters.AddWithValue("@name", _author.AuthorName);
-            worker.ExecuteNonQuery();
 
-            myConnection.Close();
-            
-            //using (ISession session = HibernateHelper.OpenSession())
-            //{
-            //    using (ITransaction transaction = session.BeginTransaction())
-            //    {
-            //        session.Save(_author);
-            //        transaction.Commit();
-            //    }
-            //}
+            //OleDbCommand worker = new OleDbCommand();
+            //worker.Connection = myConnection;
+            //worker.CommandType = CommandType.Text;
+            //worker.CommandText = ("INSERT INTO [Authors]([AuthorName]) VALUES (@name)");
+            //worker.Parameters.AddWithValue("@name", _author.AuthorName);
+            //worker.ExecuteNonQuery();
+
+            //myConnection.Close();
+
+            using (ISession session = HibernateHelper.OpenSession())
+            {
+                using (ITransaction transaction = session.BeginTransaction())
+                {
+                    session.Save(_author);
+                    transaction.Commit();
+                }
+            }
 
         }
 

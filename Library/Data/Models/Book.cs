@@ -9,7 +9,7 @@ namespace Library.Data.Models
     {
         public int BookId { get; set; }
         public string BookName { get; set; }
-        public string Desription { get; set; }
+        public string Description { get; set; }
         public int Price { get; set; }
     }
 }

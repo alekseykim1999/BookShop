@@ -19,8 +19,7 @@ namespace Library
             {
                 if(_sessionFactory==null)
                 {
-                    var cfg = new Configuration();
-                    cfg.Configure();
+                    var cfg = new Configuration().Configure("hibernate.cfg.xml");
                     cfg.AddAssembly(typeof(Author).Assembly);
 
                     _sessionFactory = cfg.BuildSessionFactory();

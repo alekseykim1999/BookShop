@@ -29,7 +29,7 @@ namespace Library.Repository
                 {
                     BookId = (int)reader[0],
                     BookName = reader[1].ToString(),
-                    Desription = reader[2].ToString(),
+                    Description = reader[2].ToString(),
                     Price = (int)reader[3]
                     
                 });

@@ -1,0 +1,73 @@
+﻿@*@using Library.Models
+    @model  Book*@
+
+@*@using Library.ViewModel
+    @model BookListViewModel*@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <h3>All Books</h3>
+    <table border="1">
+        <tr>
+            <td>
+                Id
+            </td>
+            <td>
+                Название книги
+            </td>
+            <td>
+                Описание
+            </td>
+            <td>
+                Цена
+            </td>
+        </tr>
+        @{
+            foreach (var book in Model.AllBooks)
+            {
+            <tr>
+                <td>
+                    @book.BookId
+                </td>
+                <td>
+                    @book.BookName
+                </td>
+                <td>
+                    @book.Description
+                </td>
+                <td>
+                    @book.Price
+                </td>
+            </tr>
+
+            }
+
+        }
+    </table>
+
+    <button class="btn btn-info" type="button" id="addressSearch"
+            onclick="location.href='@Url.Action("AddAuthor", "Info")'">
+        Добавить автора
+    </button>
+
+    <button class="btn btn-info" type="button" id="addressSearch"
+            onclick="location.href='@Url.Action("AddPublisher", "Info")'">
+        Добавить издателя
+    </button>
+
+    <button class="btn btn-info" type="button" id="addressSearch"
+            onclick="location.href='@Url.Action("AddBook", "Info")'">
+        Добавить книгу
+    </button>
+
+</body>
+</html>
+
+

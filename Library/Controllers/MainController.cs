@@ -13,12 +13,12 @@ namespace Library.Controllers
         BookListViewModel obj = new BookListViewModel();
 
 
-        public ViewResult Books()
+        public ViewResult BookShow()
         {
 
-            //BookRepository library = new BookRepository();
-            //obj.AllBooks = library.GetBooks();
-            return View();
+            BookRepository library = new BookRepository();
+            obj.AllBooks = library.GetBooks();
+            return View(obj);
 
 
         }

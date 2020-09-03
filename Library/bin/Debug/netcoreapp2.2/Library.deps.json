@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "871bd99e9c312a8f3c68edff91de593055a2c38d"
+    "signature": "dc5879fcbacda7e3d0953797b6d23561e0a27f1c"
   },
   "compilationOptions": {
     "defines": [
@@ -24,12 +24,14 @@
     ".NETCoreApp,Version=v2.2": {
       "Library/1.0.0": {
         "dependencies": {
+          "KendoUIWeb": "2014.1.318",
           "Microsoft.AspNet.Mvc": "5.2.7",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.AspNetCore.StaticFiles": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3",
+          "NHibernate.JetDriver": "2.0.0.1002",
           "NHibernate": "4.0.4.4000",
           "System.Data.OleDb": "4.7.1"
         },
@@ -49,6 +51,23 @@
         },
         "compile": {
           "lib/net40/Iesi.Collections.dll": {}
+        }
+      },
+      "jQuery/1.9.1": {},
+      "KendoUIWeb/2014.1.318": {
+        "dependencies": {
+          "jQuery": "1.9.1"
+        }
+      },
+      "log4net/2.0.3": {
+        "runtime": {
+          "lib/net40-full/log4net.dll": {
+            "assemblyVersion": "1.2.13.0",
+            "fileVersion": "1.2.13.0"
+          }
+        },
+        "compile": {
+          "lib/net40-full/log4net.dll": {}
         }
       },
       "Microsoft.AspNet.Mvc/5.2.7": {
@@ -315,6 +334,21 @@
         },
         "compile": {
           "lib/net40/NHibernate.dll": {}
+        }
+      },
+      "NHibernate.JetDriver/2.0.0.1002": {
+        "dependencies": {
+          "NHibernate": "4.0.4.4000",
+          "log4net": "2.0.3"
+        },
+        "runtime": {
+          "lib/net40/NHibernate.JetDriver.dll": {
+            "assemblyVersion": "2.0.0.1002",
+            "fileVersion": "2.0.0.1002"
+          }
+        },
+        "compile": {
+          "lib/net40/NHibernate.JetDriver.dll": {}
         }
       },
       "NuGet.Frameworks/4.7.0": {
@@ -3776,6 +3810,27 @@
       "path": "iesi.collections/4.0.0.4000",
       "hashPath": "iesi.collections.4.0.0.4000.nupkg.sha512"
     },
+    "jQuery/1.9.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HiX9icLyiJGgiL5EOIn0d1MBPHVV2M9mzWT4mANdniDNR51RvAFTyKEXEd2+5yQJ4PJ5xePOR61Vjj/omQzYcw==",
+      "path": "jquery/1.9.1",
+      "hashPath": "jquery.1.9.1.nupkg.sha512"
+    },
+    "KendoUIWeb/2014.1.318": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JXMjMB0HfhM1qK+pY1r9GmmWfkGZTBLuvktPx00+SZ85IdiyyyOyBUpJk01pHY8UdfYpb6Qrj9aCKFz3IXGaxA==",
+      "path": "kendouiweb/2014.1.318",
+      "hashPath": "kendouiweb.2014.1.318.nupkg.sha512"
+    },
+    "log4net/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rxMHzK5efGPo5XtRnuUGO4tfW5l74Aji6kVmtMAt2SgcB5PHBNtNY7yj2LCI2VtKrLPO7kCKR6kH6lIZggq3Gg==",
+      "path": "log4net/2.0.3",
+      "hashPath": "log4net.2.0.3.nupkg.sha512"
+    },
     "Microsoft.AspNet.Mvc/5.2.7": {
       "type": "package",
       "serviceable": true,
@@ -3894,6 +3949,13 @@
       "sha512": "sha512-Me3y8Q1NPEfiTRuisgayLs5nm7J4hoGhvXT/hD5w78WajPFfsb+qNP2ld+bNimpvW0U/BDSaZAUS0FKl5+ty/w==",
       "path": "nhibernate/4.0.4.4000",
       "hashPath": "nhibernate.4.0.4.4000.nupkg.sha512"
+    },
+    "NHibernate.JetDriver/2.0.0.1002": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/VymyqnYBaIiAY9qco2c5N5qrGXm2bmujob5slj2CWsMKp0txxnQzOHp2qTC/FX805voOGulvkw1unSrkscuTQ==",
+      "path": "nhibernate.jetdriver/2.0.0.1002",
+      "hashPath": "nhibernate.jetdriver.2.0.0.1002.nupkg.sha512"
     },
     "NuGet.Frameworks/4.7.0": {
       "type": "package",

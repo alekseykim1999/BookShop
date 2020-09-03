@@ -3,7 +3,7 @@
   <class name="Author" table="Authors">
     <id name="Id" unsaved-value="0">
       <column name="AuthorId" not-null="true" />
-      <generator class="identity"/>
+      <generator class="increment"/>
     </id>
     <property name="AuthorName" />
   </class>
