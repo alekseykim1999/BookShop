@@ -6,7 +6,11 @@
 </head>
 <body>
     <h3>Add Book</h3>
-
+    @using (Html.BeginForm("SavePublisher", "Saviour"))
+    {
+        <input type="text" name="_publisherName" />
+        <input type="submit" />
+    }
 </body>
 </html>
 

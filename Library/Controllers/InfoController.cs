@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Library.Data.Models;
+using Library.Repository;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +13,9 @@ namespace Library.Controllers
 
         public ViewResult AddAuthor() 
         {
+
+            BookRepository library = new BookRepository();
+            List<Book> hh = library.GetBooks();
             return View(); 
 
 

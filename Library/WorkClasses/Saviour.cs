@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.OleDb;
 using System.IO;
+using Library.Data;
+
 namespace Library.WorkClasses
 {
     //класс для сохранения в БД
 
    
-    public class Saviour
+    public class Saviour : Connection
     {
 
-        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=BookShop.mdb;";
-
-        OleDbConnection myConnection=new OleDbConnection(connectString);
+        
 
 
         public Saviour()
