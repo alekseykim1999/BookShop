@@ -9,5 +9,10 @@ namespace Library.Data.Models
     {
         public int PublisherId { get; set; }
         public string PublisherName { get; set; }
+
+        public Publisher(string _name)
+        {
+            this.PublisherName = _name;
+        }
     }
 }

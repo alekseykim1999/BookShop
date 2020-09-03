@@ -16,8 +16,18 @@ namespace Library.Controllers
         public ActionResult SaveAuthor(string _authorName)
         {
           
-            AuthorSaviour saviour = new AuthorSaviour();
+            Saviour saviour = new Saviour();
             saviour.SaveAuthorToAccess(new Author(_authorName));
+            return Content("Запись сохранена");
+        }
+
+
+        [HttpPost]
+        public ActionResult SavePublisher(string _publisherName)
+        {
+
+            Saviour saviour = new Saviour();
+            saviour.SavePublisherToAccess(new Publisher(_publisherName));
             return Content("Запись сохранена");
         }
     }

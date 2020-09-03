@@ -7,6 +7,8 @@ namespace Library.Data.Models
 {
     public class Author
     {
+
+        private int Id { get; set; }
         public string AuthorName { get; set; }
 
         public Author(string _name)
