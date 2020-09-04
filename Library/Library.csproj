@@ -10,11 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="NHibernate_1\Author.hbm.xml" />
+    <None Remove="hibernate.cfg.xml" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="NHibernate_1\Author.hbm.xml" />
+    <EmbeddedResource Include="hibernate.cfg.xml" />
+    <EmbeddedResource Include="HibernateMapping\Author.hbm.xml" />
   </ItemGroup>
 
   <ItemGroup>

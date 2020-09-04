@@ -13,7 +13,7 @@ namespace Library.Controllers
         BookListViewModel obj = new BookListViewModel();
 
 
-        public ViewResult BookShow()
+        public IActionResult BookShow()
         {
 
             BookRepository library = new BookRepository();

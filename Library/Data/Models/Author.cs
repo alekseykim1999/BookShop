@@ -8,12 +8,9 @@ namespace Library.Data.Models
     public class Author
     {
 
-        private int Id { get; set; }
-        public string AuthorName { get; set; }
+        public virtual int Id { get; set; }
+        public virtual string AuthorName { get; set; }
 
-        public Author(string _name)
-        {
-            this.AuthorName = _name;
-        }
+      
     }
 }

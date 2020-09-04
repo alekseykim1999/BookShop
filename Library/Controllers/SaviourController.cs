@@ -17,7 +17,11 @@ namespace Library.Controllers
         {
           
             Saviour saviour = new Saviour();
-            saviour.SaveAuthorToAccess(new Author(_authorName));
+            saviour.SaveAuthorToAccess(new Author()
+                {
+                    AuthorName = _authorName
+                }
+            );
             return Content("Запись сохранена");
         }
 

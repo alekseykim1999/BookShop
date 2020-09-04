@@ -5,6 +5,5 @@
     <property name="dialect">NHibernate.JetDriver.JetDialect, NHibernate.JetDriver</property>
     <property name="connection.driver_class">>NHibernate.JetDriver.JetDriver, NHibernate.JetDriver</property>
     <property name="connection.connection_string">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=BookShop.mdb</property>
-    <mapping resource="Author.hbm.xml" assembly="NHibernate_1" />
   </session-factory>
 </hibernate-configuration>
