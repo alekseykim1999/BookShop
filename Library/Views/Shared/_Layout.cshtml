@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <h1 align="center "class="main_title" margin-top="3px" ><font color="Black">Test Exercise</font></h1>
+        </div>
+        <div class="mleft">
+            <button class="btn-info" type="button" id="addressSearch"
+                    onclick="location.href='@Url.Action("AddAuthor", "Info")'">
+                Добавить автора
+            </button>
+            <br />
+            <button class="btn-info" type="button" id="addressSearch"
+                    onclick="location.href='@Url.Action("AddPublisher", "Info")'">
+                Добавить издателя
+            </button>
+            <br />
+            <button class="btn-info" type="button" id="addressSearch"
+                    onclick="location.href='@Url.Action("AddBook", "Info")'">
+                Добавить книгу
+            </button>
+        </div>
+
+        <div class="mright">
+            
+            @RenderBody()
+        </div>
+
+        <div class="footer" >
+            <font color="red">
+                <p>2020 Created by Aleksey</p>
+            </font>
+        </div>
+
+    </div>
+    
+    <script src="~/js/bootstrap.min.js"></script>
+</body>
+</html>

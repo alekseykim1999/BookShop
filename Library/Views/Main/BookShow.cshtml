@@ -3,18 +3,9 @@
 
 @*@using Library.ViewModel
     @model BookListViewModel*@
-@{
-    Layout = null;
-}
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-</head>
-<body>
     <h3>All Books</h3>
-    <table border="1">
+    <table border="1" align="center">
         <tr>
             <td>
                 Id
@@ -52,22 +43,7 @@
         }
     </table>
 
-    <button class="btn btn-info" type="button" id="addressSearch"
-            onclick="location.href='@Url.Action("AddAuthor", "Info")'">
-        Добавить автора
-    </button>
+    
 
-    <button class="btn btn-info" type="button" id="addressSearch"
-            onclick="location.href='@Url.Action("AddPublisher", "Info")'">
-        Добавить издателя
-    </button>
-
-    <button class="btn btn-info" type="button" id="addressSearch"
-            onclick="location.href='@Url.Action("AddBook", "Info")'">
-        Добавить книгу
-    </button>
-
-</body>
-</html>
 
 
