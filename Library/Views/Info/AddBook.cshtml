@@ -1,10 +1,33 @@
-﻿
-    <h3>Add Book</h3>
-    @using (Html.BeginForm("SavePublisher", "Saviour"))
-    {
-        <input type="text" name="_publisherName" />
-        <input type="submit" />
-    }
+﻿@*@using Library.Models
+    @model  Publisher*@
+
+@*@using Library.ViewModel
+    @model PublisherViewModel*@
+<h3>Add Book</h3>
+@using (Html.BeginForm("SavePublisher", "Saviour"))
+{
+    <input type="text" name="_bookName" />
+    <br />
+    <input type="text" name="_description" />
+    <br />
+    <select name="_publisher">
+        @{
+            foreach (var company in Model.AllPublishers)
+            {
+                <option>
+                    @company.PublisherName
+                </option>
+            }
+
+        }
+    </select>
+    <br />
+    <input type="text" name="_price" />
+    <br />
+    <input type="text" name="_release" />
+    <br />
+    <input type="submit" />
+}
 
 
 

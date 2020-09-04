@@ -16,7 +16,7 @@ namespace Library.Controllers
         public IActionResult BookShow()
         {
 
-            BookRepository library = new BookRepository();
+            PublisherRepository library = new PublisherRepository();
             obj.AllBooks = library.GetBooks();
             return View(obj);
 

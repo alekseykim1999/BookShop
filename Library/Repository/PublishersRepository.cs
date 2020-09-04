@@ -8,30 +8,25 @@ using System.Threading.Tasks;
 
 namespace Library.Repository
 {
-    public class PublisherRepository : Connection
+    public class PublishersRepository : Connection
     {
-
-
-        public PublisherRepository()
+        public PublishersRepository()
         {
             myConnection.Open();
         }
-        private List<Book> listBooks = new List<Book>();
-        public List<Book> GetBooks()
+        private List<Publisher> listBooks = new List<Publisher>();
+
+        public List<Publisher> GetPublishers()
         {
 
-            string query = "SELECT [BookId],[BookName],[Description],[Price] FROM [Books] ORDER BY [BookId]";
+            string query = "SELECT [PublisherId],[PublisherName] FROM [Publishers] ORDER BY [PublisherId]";
             OleDbCommand command = new OleDbCommand(query, myConnection);
             OleDbDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                listBooks.Add(new Book
+                listBooks.Add(new Publisher(reader[1].ToString())
                 {
-                    BookId = (int)reader[0],
-                    BookName = reader[1].ToString(),
-                    Description = reader[2].ToString(),
-                    Price = (int)reader[3]
-                    
+                    PublisherId = (int)reader[0]                
                 });
             }
             reader.Close();
@@ -41,6 +36,5 @@ namespace Library.Repository
             return listBooks;
 
         }
-
     }
 }

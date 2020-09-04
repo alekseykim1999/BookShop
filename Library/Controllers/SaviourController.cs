@@ -34,5 +34,14 @@ namespace Library.Controllers
             saviour.SavePublisherToAccess(new Publisher(_publisherName));
             return Content("Запись сохранена");
         }
+
+        [HttpPost]
+        public ActionResult SaveBook(object Book)
+        {
+
+            Saviour saviour = new Saviour();
+            saviour.SaveBookToAccess(new Book());
+            return Content("Запись сохранена");
+        }
     }
 }

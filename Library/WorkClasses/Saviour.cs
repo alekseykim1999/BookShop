@@ -51,7 +51,7 @@ namespace Library.WorkClasses
 
         public void SavePublisherToAccess(Publisher _publisher)
         {
-            myConnection.Open();
+            
 
 
             OleDbCommand worker = new OleDbCommand();
@@ -62,8 +62,19 @@ namespace Library.WorkClasses
             worker.ExecuteNonQuery();
 
             myConnection.Close();
+        }
 
-          
+        public void SaveBookToAccess(Book _book)
+        {
+           
+            OleDbCommand worker = new OleDbCommand();
+            worker.Connection = myConnection;
+            worker.CommandType = CommandType.Text;
+            worker.CommandText = ("INSERT INTO [Publishers]([PublisherName]) VALUES (@name)");
+            worker.Parameters.AddWithValue("@name", _book.BookName);
+            worker.ExecuteNonQuery();
+
+            myConnection.Close();
         }
 
     }

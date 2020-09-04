@@ -1,5 +1,6 @@
 ﻿using Library.Data.Models;
 using Library.Repository;
+using Library.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -25,8 +26,10 @@ namespace Library.Controllers
 
         public ViewResult AddBook()
         {
-            
-            return View();
+            PublishersRepository companies = new PublishersRepository();
+            PublisherViewModel obj = new PublisherViewModel();
+            obj.AllPublishers = companies.GetPublishers();
+            return View(obj);
         }
 
     }
