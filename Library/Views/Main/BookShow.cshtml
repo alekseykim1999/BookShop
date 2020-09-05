@@ -19,24 +19,30 @@
             <td>
                 Цена
             </td>
+            <td>
+                Дата выхода
+            </td>
         </tr>
         @{
             foreach (var book in Model.AllBooks)
             {
-            <tr>
-                <td>
-                    @book.BookId
-                </td>
-                <td>
-                    @book.BookName
-                </td>
-                <td>
-                    @book.Description
-                </td>
-                <td>
-                    @book.Price
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @book.BookId
+            </td>
+            <td>
+                @book.BookName
+            </td>
+            <td>
+                @book.Description
+            </td>
+            <td>
+                @book.Price
+            </td>
+            <td>
+                @book.ReleaseDate
+            </td>
+        </tr>
 
             }
 

@@ -4,11 +4,11 @@
 @*@using Library.ViewModel
     @model PublisherViewModel*@
 <h3>Add Book</h3>
-@using (Html.BeginForm("SavePublisher", "Saviour"))
+@using (Html.BeginForm("SaveBook", "Saviour"))
 {
     <input type="text" name="_bookName" />
     <br />
-    <input type="text" name="_description" />
+    <textarea name="_description"></textarea>
     <br />
     <select name="_publisher">
         @{

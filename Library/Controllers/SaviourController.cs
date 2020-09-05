@@ -8,15 +8,17 @@ using System.Threading.Tasks;
 using Library.Data.Models;
 using Library.WorkClasses;
 
+
 namespace Library.Controllers
 {
     public class SaviourController : Controller
     {
+        private Saviour saviour = new Saviour();
         [HttpPost]
         public ActionResult SaveAuthor(string _authorName)
         {
           
-            Saviour saviour = new Saviour();
+            
             saviour.SaveAuthorToAccess(new Author()
                 {
                     AuthorName = _authorName
@@ -30,17 +32,24 @@ namespace Library.Controllers
         public ActionResult SavePublisher(string _publisherName)
         {
 
-            Saviour saviour = new Saviour();
+           
             saviour.SavePublisherToAccess(new Publisher(_publisherName));
             return Content("Запись сохранена");
         }
 
         [HttpPost]
-        public ActionResult SaveBook(object Book)
+        public ActionResult SaveBook(IFormCollection form)
         {
+            Book book = new Book();
 
-            Saviour saviour = new Saviour();
-            saviour.SaveBookToAccess(new Book());
+            book.BookName= form["_bookName"].ToString();
+            book.Description = form["_description"].ToString();
+            book.ReleaseDate = form["_release"].ToString();
+            book.Price = Convert.ToInt32(form["_price"]);
+            book.Publisher = form["_publisher"].ToString();
+           
+            
+            saviour.SaveBookToAccess(book);
             return Content("Запись сохранена");
         }
     }

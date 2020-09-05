@@ -20,7 +20,7 @@ namespace Library.Repository
         public List<Book> GetBooks()
         {
 
-            string query = "SELECT [BookId],[BookName],[Description],[Price] FROM [Books] ORDER BY [BookId]";
+            string query = "SELECT [BookId],[BookName],[Description],[Price],[PublishedAt] FROM [Books] ORDER BY [BookId]";
             OleDbCommand command = new OleDbCommand(query, myConnection);
             OleDbDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -30,8 +30,9 @@ namespace Library.Repository
                     BookId = (int)reader[0],
                     BookName = reader[1].ToString(),
                     Description = reader[2].ToString(),
-                    Price = (int)reader[3]
-                    
+                    Price = (int)reader[3],
+                    ReleaseDate = reader[4].ToString()
+
                 });
             }
             reader.Close();

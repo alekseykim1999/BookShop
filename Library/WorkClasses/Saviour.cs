@@ -13,21 +13,19 @@ using Library.Data;
 
 namespace Library.WorkClasses
 {
-    //класс для сохранения в БД
-
-   
+    /*класс для сохранения в БД*/
     public class Saviour : Connection
-    {   
+    {
+
+        OleDbCommand worker = new OleDbCommand();
         public Saviour()
         {
             myConnection.Open();
+
         }
         public void SaveAuthorToAccess(Author _author)
         {
 
-
-
-            OleDbCommand worker = new OleDbCommand();
             worker.Connection = myConnection;
             worker.CommandType = CommandType.Text;
             worker.CommandText = ("INSERT INTO [Authors]([AuthorName]) VALUES (@name)");
@@ -51,10 +49,7 @@ namespace Library.WorkClasses
 
         public void SavePublisherToAccess(Publisher _publisher)
         {
-            
 
-
-            OleDbCommand worker = new OleDbCommand();
             worker.Connection = myConnection;
             worker.CommandType = CommandType.Text;
             worker.CommandText = ("INSERT INTO [Publishers]([PublisherName]) VALUES (@name)");
@@ -66,16 +61,35 @@ namespace Library.WorkClasses
 
         public void SaveBookToAccess(Book _book)
         {
-           
-            OleDbCommand worker = new OleDbCommand();
+
             worker.Connection = myConnection;
             worker.CommandType = CommandType.Text;
-            worker.CommandText = ("INSERT INTO [Publishers]([PublisherName]) VALUES (@name)");
+            worker.CommandText = ("INSERT INTO [Books]([BookName],[Description],[Price],[PublishedAt],[IdPublisher]) VALUES (@name,@descr,@price,@release,@pub)");
             worker.Parameters.AddWithValue("@name", _book.BookName);
+            worker.Parameters.AddWithValue("@descr", _book.Description);
+            worker.Parameters.AddWithValue("@price", _book.Price);
+            worker.Parameters.AddWithValue("@price", _book.ReleaseDate);
+            worker.Parameters.AddWithValue("@pub",GetPublisherName(_book.Publisher,myConnection));
             worker.ExecuteNonQuery();
 
             myConnection.Close();
         }
 
+
+        private int GetPublisherName(string _name, OleDbConnection _con)
+        {
+            int id=0;
+            string query = "SELECT [PublisherId] FROM [Publishers] WHERE [PublisherName] = '" + _name + "'";
+            OleDbCommand command = new OleDbCommand(query, _con);
+            OleDbDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                id = (int)reader[0];
+            }
+            reader.Close();
+
+            return id;
+        }
     }
+
 }
