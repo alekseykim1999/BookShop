@@ -28,9 +28,13 @@ namespace Library
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute();
+            app.UseMvcWithDefaultRoute(); app.UseMvc(routes =>
+            {
+                routes.MapRoute("default", "{controller=Main}/{action=BookShow}");
+            });
 
-            
+
+
         }
     }
 }
