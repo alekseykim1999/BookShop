@@ -22,6 +22,9 @@
             <td>
                 Дата выхода
             </td>
+            <td>
+                Издатель
+            </td>
         </tr>
         @{
             foreach (var book in Model.AllBooks)
@@ -41,6 +44,9 @@
             </td>
             <td>
                 @book.ReleaseDate
+            </td>
+            <td>
+                @book.Publisher
             </td>
         </tr>
 

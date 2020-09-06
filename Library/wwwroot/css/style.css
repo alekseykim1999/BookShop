@@ -31,17 +31,13 @@ li{
     margin-left:-20px;
 }
 .mright {
-    overflow: hidden;
-    float: center;
-    width: 1330px;
-    height: 460px;
-    margin: auto;
-    margin-left: 165px;
-    margin-top: -400px;
+    width: 1205px;
+    height: 600px;
+    margin-left: 290px;
+    margin-top: -600px;
     text-align: center;
-    color: 000000;
     font-size: 16px;
-  
+    background-color: #61ec1c;
 }
 
 .main_button {
@@ -88,10 +84,66 @@ ul {
     height: 50px;
     width: 1496px;
     border: 2;
-    margin-top:-80px;
+    margin-top:0px;
     border-style: inset;
     border-color: darkblue;
     border-width: 3px;
     background-color: black;
+}
+
+.add_book {
+    background-color: #ec1c24;
+    width: 300px;
+    height: 400px;
+    margin-top: 0px;
+    margin-left: 400px;
+}
+
+.info {
+    width: 240px;
+    margin-top:20px;
+}
+
+.submit_btn {
+    margin-top: 20px;
+    background: -moz-linear-gradient(#00BBD6, #EBFFFF);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#00BBD6), to(#EBFFFF));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
+    padding: 3px 7px;
+    color: #333;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #666;
+}
+
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    border-collapse: collapse;
+    text-align: center;
+
+    margin-top:100px;
+}
+
+th, td:first-child {
+    background: #AFCDE7;
+    color: white;
+    padding: 10px 20px;
+}
+
+th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+}
+
+td {
+    background: #D8E6F3;
+}
+
+th:first-child, td:first-child 
+{
+        text-align: left;
 }
 

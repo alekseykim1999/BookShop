@@ -15,7 +15,7 @@ namespace Library.Controllers
     {
         private Saviour saviour = new Saviour();
         [HttpPost]
-        public ActionResult SaveAuthor(string _authorName)
+        public RedirectResult SaveAuthor(string _authorName)
         {
           
             
@@ -24,17 +24,20 @@ namespace Library.Controllers
                     AuthorName = _authorName
                 }
             );
-            return Content("Запись сохранена");
+            return Redirect("/Main/BookShow");
+
         }
 
 
         [HttpPost]
-        public ActionResult SavePublisher(string _publisherName)
+        public RedirectResult SavePublisher(string _publisherName)
         {
 
            
             saviour.SavePublisherToAccess(new Publisher(_publisherName));
-            return Content("Запись сохранена");
+
+            return Redirect("/Main/BookShow");
+
         }
 
         [HttpPost]
@@ -50,7 +53,9 @@ namespace Library.Controllers
            
             
             saviour.SaveBookToAccess(book);
-            return Content("Запись сохранена");
+
+            return Redirect("/Main/BookShow");
+
         }
     }
 }
