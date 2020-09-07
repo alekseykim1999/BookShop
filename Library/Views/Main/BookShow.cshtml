@@ -5,7 +5,13 @@
     @model BookListViewModel*@
 
     <h3>All Books</h3>
-    <table border="1" align="center">
+    Фильтр по названию
+    <input class="form-control" type="text" placeholder="Название" id="search-text" onkeyup="NameSearch()">
+    Фильтр по цене
+    <input class="form-control" type="text" placeholder="Цена" id="price-text" onkeyup="PriceSearch()">
+    Фильтр по издателю
+    <input class="form-control" type="text" placeholder="Издатель" id="publish-text" onkeyup="PublisherSearch()">
+    <table border="1" align="center" class="table table-striped" id="info-table">
         <tr>
             <td>
                 Id
@@ -54,6 +60,67 @@
 
         }
     </table>
+<script>
+    function NameSearch() {
+        var phrase = document.getElementById('search-text');
+        var table = document.getElementById('info-table');
+        var regPhrase = new RegExp(phrase.value, 'i');
+        var flag = false;
+        for (var i = 1; i < table.rows.length; i++) {
+            flag = false;
+            for (var j = table.rows[i].cells.length - 1; j >= 0; j--) {
+                flag = regPhrase.test(table.rows[i].cells[1].innerHTML);
+                if (flag) break;
+            }
+            if (flag) {
+                table.rows[i].style.display = "";
+            } else {
+                table.rows[i].style.display = "none";
+            }
+
+        }
+    }
+
+    function PriceSearch() {
+        var phrase = document.getElementById('price-text');
+        var table = document.getElementById('info-table');
+        var regPhrase = new RegExp(phrase.value, 'i');
+        var flag = false;
+        for (var i = 1; i < table.rows.length; i++) {
+            flag = false;
+            for (var j = table.rows[i].cells.length - 1; j >= 0; j--) {
+                flag = regPhrase.test(table.rows[i].cells[3].innerHTML);
+                if (flag) break;
+            }
+            if (flag) {
+                table.rows[i].style.display = "";
+            } else {
+                table.rows[i].style.display = "none";
+            }
+
+        }
+    }
+
+    function PublisherSearch() {
+        var phrase = document.getElementById('publish-text');
+        var table = document.getElementById('info-table');
+        var regPhrase = new RegExp(phrase.value, 'i');
+        var flag = false;
+        for (var i = 1; i < table.rows.length; i++) {
+            flag = false;
+            for (var j = table.rows[i].cells.length - 1; j >= 0; j--) {
+                flag = regPhrase.test(table.rows[i].cells[5].innerHTML);
+                if (flag) break;
+            }
+            if (flag) {
+                table.rows[i].style.display = "";
+            } else {
+                table.rows[i].style.display = "none";
+            }
+
+        }
+    }
+</script>
 
     
 

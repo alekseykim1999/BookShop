@@ -80,21 +80,26 @@ ul {
     width: 230px;
     margin-top:50px;
 }
+
+
 .footer {
     height: 50px;
     width: 1496px;
     border: 2;
-    margin-top:0px;
+    margin-top:-3px;
     border-style: inset;
     border-color: darkblue;
     border-width: 3px;
     background-color: black;
 }
 
+h4{
+    margin-bottom:-10px;
+}
 .add_book {
     background-color: #ec1c24;
     width: 300px;
-    height: 400px;
+    height: 600px;
     margin-top: 0px;
     margin-left: 400px;
 }
@@ -103,6 +108,7 @@ ul {
     width: 240px;
     margin-top:20px;
 }
+
 
 .submit_btn {
     margin-top: 20px;
@@ -117,13 +123,13 @@ ul {
     border: 1px solid #666;
 }
 
-table {
+.table table-striped {
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     font-size: 14px;
     border-collapse: collapse;
     text-align: center;
-
-    margin-top:100px;
+    margin-top: 100px;
+    width:800px;
 }
 
 th, td:first-child {

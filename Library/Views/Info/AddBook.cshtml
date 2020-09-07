@@ -6,11 +6,13 @@
 <div class="add_book">
     @using (Html.BeginForm("SaveBook", "Saviour"))
     {
-
+        <h4>Название </h4>
         <input type="text" name="_bookName" class="info" />
         <br />
+        <h4>Описание </h4>
         <textarea name="_description" class="info"></textarea>
         <br />
+        <h4>Издатель </h4>
         <select name="_publisher" class="info">
             @{
                 foreach (var company in Model.AllPublishers)
@@ -23,14 +25,15 @@
             }
         </select>
         <br />
+        <h4>Цена </h4>
         <input type="text" name="_price" class="info" />
         <br />
+        <h4>Дата выпуска </h4>
         <input type="text" name="_release" class="info" />
         <br />
         <input type="submit" class="submit_btn" />
 
     }
-
 </div>
     
 
